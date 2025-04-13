@@ -1,6 +1,7 @@
 package com.example.UserMQ.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +15,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
-    @PostMapping("/sendToCart/{id}")
+    @GetMapping("/sendToCart/{id}")
     public String sendToCart(@PathVariable String id) {
         // Logic to send message to CartMQ
         

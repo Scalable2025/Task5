@@ -20,8 +20,8 @@ public class UserService {
     }
 
     @RabbitListener(queues = RabbitMQConfig.USER_QUEUE)
-    public void receiveMessage(String message) {
-        System.out.println("Received message from User Queue: " + message);
+    public void receiveMessageFromCart(String message) {
+        System.out.println("Received message from Cart: " + message);
         
     }
 

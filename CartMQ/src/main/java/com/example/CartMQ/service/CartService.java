@@ -14,11 +14,10 @@ public class CartService {
     private RabbitMQProducer rabbitMQProducer;
 
     @RabbitListener(queues = RabbitMQConfig.CART_QUEUE)
-    public void receiveMessage(String message) {
-        System.out.println("Received message from Cart Queue: " + message);
-        // Create New Cart
+    public void receiveMessageFromUser(String message) {
+        System.out.println("Received message from User: " + message);
+        // Create New Cart with the received user ID
         // Send it to UserMQ
-        
     }
 
 }

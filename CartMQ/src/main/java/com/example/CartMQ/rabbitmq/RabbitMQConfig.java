@@ -10,11 +10,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-    public static final String EXCHANGE_NAME = "shared.exchange";
-
+    
     public static final String USER_QUEUE = ""; // name should be user.queue_<Your ID>
     public static final String CART_QUEUE = ""; // name should be cart.queue_<Your ID>
-
+    
+    public static final String EXCHANGE_NAME = "shared.exchange";
     public static final String ROUTING_KEY_TO_CART = "route.to.cart";
     public static final String ROUTING_KEY_TO_USER = "route.to.user";
 
